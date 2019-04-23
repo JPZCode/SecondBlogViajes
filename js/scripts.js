@@ -1,10 +1,21 @@
 $(function() { //Función que carga JQuery
   'use strict';
 
-  $('.navegacion ul li a').on('click', function(e) {
+  $('main').on({
+    click: function() {
+      $(this).addClass('fondorojo activo');
+  }, mouseenter: function() {
+      $(this).addClass('fondorojo');
+  }, mouseleave: function() {
+      $(this).addClass('activo');
+  }
+  });
+
+
+  /* $('.navegacion ul li a').on('click', function(e) {
     e.preventDefaul();
     $(this).addClass('activo')
-  });
+  }); */
 
   //$('main article:first').remove(); // Elimina del DOM.
   //$('main article:first').hide(); // Oculta
