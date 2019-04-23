@@ -1,6 +1,11 @@
 $(function() { //Función que carga JQuery
   'use strict';
 
+  $('.navegacion ul li a').on('click', function(e) {
+    e.preventDefaul();
+    $(this).addClass('activo')
+  });
+
   //$('main article:first').remove(); // Elimina del DOM.
   //$('main article:first').hide(); // Oculta
 /*
@@ -30,9 +35,9 @@ $('div.logo img').on('mouseleave', function () {
 }); */
 
 
-$('#menu').on('click', function(){
+/* $('#menu').on('click', function(){
   $('#navegacion').show();
-});
+}); */
 
 
 });
